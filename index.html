@@ -5,117 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Gabriel</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/c2f7b80894.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
-   
-    <header class="nav-container">
-        <div class="logo-icon" href=""></div>      <!--Jangan lupa Gambar icon nya-->
- 
-        <nav class="nav-border">
-            <a>Home</a>
-            <a>My profile</a>
-            <a>Message us</a>
-        </nav>
-    </header>
+<!-- Navigation -->  
+<header class="nav-container">
+    <div class="logo-icon"></div>     
+    <nav class="nav-border">
+        <a href="#Main">Home</a>
+        <a href="#profile">My Profile</a>
+        <a href="#Message">Message Us</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="main-content">
-            <article> 
-                <div class="main-text">
-                    <h1>HELLO USER.</h1>
-                </div>
-                <div>
-                    <h2>WELCOME TO MY FIRST PROFILE WEBSITE.</h2>
-                </div>
-            </article>
-        </section>
-    </main>
-
-    <section class="top-about">
-        <h1>My profile</h1>
-    </section>
-
-    <section class="my-profile">
-        <div class="profile-container">
-            <div class="my-photo"> <img src="photo.jpg" alt=""> </div>          
-        </div>
-        <div class="about-container">  
-            <div class="details">
-                <h1>Details</h1>
-                <p>Name: </p>
-                <p>Gabriel Kaunang</p>
-                <p>Age:</p>
-                <p>19 years</p>
+<!-- Main Page -->
+<main id="Main">
+    <section class="main-content">
+        <article class="changename">
+            <div class="beranda">
+                <h1>HALLO <span id="welcome-title"></span>.</h1>
             </div>
-
-            <div class="about-me">
-                <div class="hello">
-                    <h1>About me</h1>
-                </div>
-           
-                <div class="penjelasan">
-                    <P>At this time i'm still pursuing my studies at Klabat University (UNKLAB).
-                    As an enthusiastic student, I always strive to develop my knowledge and skills in the field of IT. 
-                    UNKLAB has provided me with many opportunities to learn, collaborate with my peers, and engage in various academic and extracurricular activities.
-                    I hope to apply the knowledge I have gained in the future to make a positive contribution to society.</P>
-                </div>
-
-                <div class="icon-social">
-                    <div class="profile-item-1">
-                        <div class="profile icon profile-1"></div>
-                    </div>
-            
-                    <div class="profile-item-2">
-                        <div class="profile icon profile-2"></div>          
-                    </div>
-            
-                    <div class="profile-item-3">
-                        <div class="profile icon profile-3"></div>          
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        </article>
     </section>
+    <div class="welcome">
+        <h2>WELCOME TO MY FIRST PROFILE WEBSITE.</h2>
+    </div>
+</main>
 
-    <section class="profile-content">
-        <div class="">
-            <div class=""></div>
+<!-- Banner Slide -->
+<section class="banner-background">
+    <div class="banner-slide">     
+        <div class="image-slide">     
+            <img src="./assets/image1.jpg" class="slide" alt="gambar1">
+            <img src="./assets/image2.jpg" class="slide" alt="gambar2">
+            <img src="./assets/image3.jpg" class="slide" alt="gambar3">
+            <img src="./assets/image4.jpg" class="slide" alt="gambar4">
         </div>
+        <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="next" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+</section>
 
-        <div class="">
-            <div class=""></div>          
+<!-- Profile Section -->
+<section id="profile" class="top-about">
+    <h1>My Profile</h1>
+</section>
+
+<section class="my-profile">
+    <div class="profile-container">
+        <div class="my-photo"></div>          
+    </div>
+    <div class="about-container">  
+        <div class="details">
+            <h1>Details</h1>
+            <p>Name: Gabriel Kaunang</p>
+            <p>Age: 19 years</p>
         </div>
-
-        <div class="">
-            <div class=""></div>          
+        <div class="about-me">
+            <h1>About Me</h1>
+            <p>At this time I'm still pursuing my studies in Universty. As an enthusiastic student, I always strive to develop my knowledge and skills in the field of IT. Universty has provided me with many opportunities to learn, collaborate with my peers, and engage in various academic and extracurricular activities. I hope to apply the knowledge I have gained in the future to make a positive contribution to society.</p>
         </div>
     </div>
-    </section>
+</section>
+<!--icon sosial-->
+<div class="icon-social">
+    <div class="profile-item-1"><div class="profile icon profile-1"></div></div>
+    <div class="profile-item-2"><div class="profile icon profile-2"></div></div>
+    <div class="profile-item-3"><div class="profile icon profile-3"></div></div>
+</div>
 
-    <section class="form">
-        <form name="message-form" onsubmit="return validateForm()">
-            Nama: <input placeholder="Nama" type="text" name="full-name" /><br />
-            
-            Tanggal Lahir: <input type="date" name="birth-date" /><br />
-            
-            Jenis Kelamin:
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Laki-laki</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Perempuan</label>
-            <br />
-            
-            Pesan:
-              <textarea placeholder="Pesan" name="messages"></textarea>
-            <br />
-            
-            <input type="submit" value="Submit" />
-          </form>
-    </section>
-      
+<!-- Message Us Section -->
+<section class="profile-content">
+    <div class="Message">
+        <p id="Message">MESSAGE US</p>
+    </div>
+</section>
 
-    
+<!-- Form Section -->
+<section class="form">
+    <form name="message-form" onsubmit="return validateForm()">
+        <table class="tabel-container">
+            <tr>
+                <th>Nama:</th>
+                <td><input class="width-form" placeholder="Nama" type="text" name="full-name"></td>
+            </tr>
+            <tr>
+                <th>Tanggal Lahir:</th>
+                <td><input class="width-form" type="date" name="birth-date"></td>
+            </tr>
+            <tr>
+                <th>Jenis Kelamin:</th>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <th>Pesan:</th>
+                <td><textarea class="width-form" placeholder="Pesan" name="messages"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="width-form" type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="textarea">
+        <div class="textarea-container">                
+            <p>Nama: <span id="sender-full-name"></span></p>
+            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+            <p>Pesan: <span id="sender-messages"></span></p>  
+        </div>
+    </div> 
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+    <p>&copy; Gabriel Kaunang</p>
+</footer>
 </body>
 </html>

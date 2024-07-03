@@ -1,70 +1,292 @@
+/* Add this media query to make the layout responsive at 500px or less */
+@media only screen and (max-width: 700px) {
+    /* Adjust the layout and styling as needed for smaller screens */
+    
+    /* Make the main content area full-width */
+    main {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    /* Adjust the font sizes and margins for smaller screens */
+    h1,h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    
+    /* Make the navigation menu more compact */
+    .nav-container {
+      flex-direction: row;
+      padding: 10px;
+      display: flow-root;
+
+    }
+    
+    .nav-border {
+      height: 40px;
+      display: flow;
+      height: 65px;
+      padding-right: 700px;
+    }
+    
+    .nav-border a {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    /* Adjust the profile content layout */
+    .profile-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .profile-icon {
+      height: 40px;
+      width: 40px;
+    }
+    
+    /* Make the about me section more compact */
+    .about-me {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .details {
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    /* Adjust the form layout */
+    .form {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+    .width-form {
+      width: 100%;
+    }
+    
+    .textarea {
+      width: 100%;
+      height: 200px;
+    }
+    
+    /* Adjust the footer layout */
+    footer {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .my-profile{
+        
+        display: flow-root;
+        height: 13000px;
+        background-color: black;
+        width: auto;
+      
+
+    }
+  }
+
+
+/* Styling untuk bagian utama */
 main{
     width: auto;
-    height: 570px;
+    height: 300px;
     background-image: url(../assets/blackspace.png);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: sans-serif;
 }
 
+
+/* Styling untuk bagian body */
 body{
     background-color: black;
+    width: auto;
+    height: auto;
+    font-family: 'Orbitron', sans-serif;
 }
+
+/* Styling untuk judul h2 */
 h2{
     text-align: center;
     text-align: center;
     color: snow;
 }
+
+h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
+
+/* Styling untuk judul h2 */
 .main-content{
-    padding-top: 215px;
+    justify-content: center;
+    padding-top: 80px;
+    display: flex;
+    text-align: center;
+    margin: 50px;
+
 }    
 
+.welcome {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.beranda h1{
+    display: flow-root;
+    font-style: oblique;
+    color: rgb(251, 251, 249);
+    height: 5px;
+}
+
+
+.beranda button{
+    text-align: center;
+    font-family: math;
+    font-size: medium;
+    color: black;
+    display: flex;
+    height: 25px;
+    margin: auto;
+}
+
+
+/* Latar belakang untuk banner */
+.banner-background{
+    background-image: url(../assets/blackspace.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 130px;
+
+}
+
+/* Styling untuk slide banner */
+.banner-slide {
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    box-shadow: #8d8989 0px 2px 5px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 45px;
+}
+
+  /* Konten slide gambar */
+  .image-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hide all images */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Tampilkan gambar pertama secara default */
+  .slide:first-child { /* Show the first image by default */
+    opacity: 1;
+  }
+  
+  /* Tombol navigasi slide sebelumnya dan berikutnya */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center buttons vertically */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
 
 .opening{
     text-align: center;
 }
 
+/* Icon logo */
 .logo-icon {
-    height: 50px;
-    width: 50px;
-    border: 1px solid;
-}
-
-.nav-container{
+    height: 55px;
+    width: 55px;
+    background-image: url(../assets/Logo.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    border-radius: 40px;
+    margin-left: 25px;
+  }
+  
+  
+  .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
     border-bottom-style: outset;
     background-color: rgb(169 171 180 / 61%);
+    height: 15px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: -webkit-fill-available;
+    z-index: 10;
 }
-
-nav>a {
+  .nav-border {
+    display: flex;
+    height: 65px;
+  }
+  
+  .nav-border a {
     padding-left: 30px;
     padding-right: 30px;
-    border: 1px solid;   
+    display: flex;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 3PX;
+    padding-top: 25px;
 }
+
+  
+  .nav-border a:hover {
+    background-color: rgba(238, 240, 242, 0.71);
+  }
+  
+
 
 .profile-content{
     display: flex;
     justify-content: space-evenly;
     width: auto;
     background-color: rgb(169 171 180 / 61%);
-    height: 70px;
+    height: 55px;
     border-bottom: ridge
-}
-
-
-.profile-item-1{
-    text-align: center;
-}
-
-.profile-item-2{
-    text-align: center;
-}
-
-.profile-item-3{
-    text-align: center;
 }
 
 
@@ -114,31 +336,30 @@ nav>a {
 
 
 .about-container{
-    padding-right: 120px;
+    padding-right: 240px;
+    width: auto;
 }
 .about-me{
     width: 384px;
     height: 350px;
-    padding-top: 200px;
     padding-right: 30px;
     text-align: start;
+    color: white;
+    margin-top: 200px;
 }
 
 .details{
     width: 110px;
     height: 1px;
     color: white;
-    margin-top: 43px;
+    margin-top: 80px;
     text-align: left;
 }
-
-
-
 
 .my-profile{
     display: flex;
     justify-content: space-between;
-    height: 590px;
+    height: 600px;
     background-color: black;
     width: auto;
 
@@ -186,7 +407,7 @@ nav>a {
     display: flex;
     justify-content: center;
     border-bottom-style: outset;
-    padding-top: 170px;
+    padding-top: 40px;
     background-image: url(../assets/blackspace.png);
     background-attachment: fixed;
     background-position: center;
@@ -196,35 +417,86 @@ nav>a {
 
 .my-photo{
     background-image: url(../assets/photo.jpg);
-    width: 360px;
-    height: 421px;
-    background-attachment: local;
+    width: 442px;
+    height: 375px;
+    background-position: top;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    margin-left: 120px;
-    border-radius: 105px;
-    margin-top: 33px;
-    margin-right: 35px;
+    margin-top: 54px;
+    border-radius: 100%;
 }
+
 
 
 .profile-container{
     height: 480px;
-    width: 600px;
+    width: auto;
     background-color: #989da378;
     display: flex;
     margin-top: 50px;
-    margin-left: 20px;
-    border-radius: 20px;
+    margin-right: 110px;
+    border-radius: 120px;
 }
+
 
 .icon-social{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: 75px;
+    width: auto;
 }
 
 .form{
     background-color: #e3e3e3;
-    height: 460px;
+    height: 530px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom-style: outset;
 }
+
+.tabel-container {
+    width: auto;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 30px;
+}
+.tabel-container th, .tabel-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.width-form{
+    width: 325px;
+
+}
+
+.width-form textarea{
+    height: 100px;
+}
+.message{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.textarea{
+    width: 340px;
+    height: 360px;
+    border-style: inset;
+    padding-top: 25px;
+    margin-top: 36px;
+}
+
+.textarea-container{
+    margin-top: 80px;
+    padding-left: 15px;
+}
+footer{
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+
