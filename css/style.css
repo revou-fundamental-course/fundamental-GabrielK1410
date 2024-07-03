@@ -14,6 +14,10 @@
       margin-bottom: 10px;
     }
     
+    .icon-social{
+        flex-direction: row;
+        margin-top: 600px;
+    }
     /* Make the navigation menu more compact */
     .nav-container {
       flex-direction: row;
@@ -21,7 +25,12 @@
       display: flow-root;
 
     }
+
     
+    .form {
+        flex-direction: column;
+        padding-bottom: 140px;
+    }
     .nav-border {
       height: 40px;
       display: flow;
@@ -38,6 +47,7 @@
     .profile-content {
       flex-direction: column;
       align-items: center;
+      margin-top: 100px;
     }
     
     .profile-icon {
@@ -59,11 +69,7 @@
     /* Adjust the form layout */
     .form {
       flex-direction: column;
-      padding: 20px;
-    }
-    
-    .width-form {
-      width: 100%;
+      padding-bottom: 40px;
     }
     
     .textarea {
@@ -77,16 +83,12 @@
       text-align: center;
     }
 
-    .my-profile{
-        
-        display: flow-root;
-        height: 13000px;
-        background-color: black;
-        width: auto;
-      
-
+    .my-profile {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        height: 1200px; /* Set tinggi menjadi 1200px */
+        padding: 20px; /* Padding tambahan jika diperlukan */
     }
-  }
+}
 
 
 /* Styling untuk bagian utama */
@@ -336,7 +338,6 @@ h1{
 
 
 .about-container{
-    padding-right: 240px;
     width: auto;
 }
 .about-me{
@@ -468,7 +469,7 @@ h1{
 }
 
 .width-form{
-    width: 325px;
+    width: 230px;
 
 }
 
