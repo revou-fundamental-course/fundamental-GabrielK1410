@@ -36,7 +36,7 @@
       display: flow;
       height: 65px;
       padding-right: 700px;
-    }
+    }  
     
     .nav-border a {
       padding-left: 10px;
@@ -110,6 +110,7 @@ body{
     width: auto;
     height: auto;
     font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Styling untuk judul h2 */
@@ -346,7 +347,7 @@ h1{
     padding-right: 30px;
     text-align: start;
     color: white;
-    margin-top: 200px;
+    margin-top: 70px;
 }
 
 .details{
